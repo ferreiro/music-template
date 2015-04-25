@@ -1,0 +1,490 @@
+/*
+	Write the basic stuff here.
+	Viewports and so. Standarize this.
+*/
+	
+body {
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	background: #f4f4f4;
+	background: #fff;
+	font-size: 16px;
+	color: #222;
+	font-family: 'Roboto',Helvetica, sans-serif, Arial; 
+}
+h1, h2, h3, h4, h5, p, a {
+	color: #222;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+button {
+	margin: 0;
+	padding: 0;
+	list-style: none; 
+	border: 0;
+	outline: 0;
+}
+
+/** HEADER **********/
+
+.header {
+	width: 100%;
+	padding: .5em 0;
+	padding-top: 0.7em;
+	background: #fff;
+	border-bottom: 1px solid #EFEFEF;
+	position: fixed;
+	z-index: 10;
+	top: 0;
+}
+.headerInt {
+	/* nothing for mobile */
+	padding: 0 1em;
+}
+.headerLogo {
+	width: 150px;
+	height: 40px;
+	background: #f4f4f4;
+	display: inline-block;
+}
+.HeaderLogoLink {
+	width: 100%; 
+	height: 100%; 
+	display: block;
+}
+.HeaderLogoImage {
+	/* background: url(); */
+}
+.headerOptions {
+	float: right;
+	height: 40px; 
+}
+/* 
+	Commun style for options links 
+*/
+.headerOptionsLink { 
+	height: 40px;
+	min-width: 40px;
+	display: inline-block; 
+	vertical-align: middle;
+	position: relative;
+	/* background: blue; */  /* Debug mode */
+}
+.headerOptionsLink a ,
+.headerOptionsLink a span {
+	display: inline-block;
+	width: 100%; height: 100%; 
+} 
+.headerOptionsLink a span:before {
+	font-size: 40px; /* Icon size */
+	color: #bd2e2e !important;
+}
+.searchLink a span:before {
+	font-size: 32px; /* Icon size */ 
+	margin-top: 4px;
+	display: block;
+}
+.headerOptionsLink a p {
+	display: none; /* Hide text for mobiles screen */ 
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-left: 7px;
+	color: #BD2E2E !important;
+}
+/* 	Specific styles for header options link */
+.mobileMenuLink {
+	/* background: #000; */ /* Debug mode */
+	color: #bd2e2e !important; 
+}
+.mobileMenuButton {
+	width: 100%;
+	height: 100%; 
+	cursor: pointer;   
+	border: 0;
+	background: transparent;
+}
+.mobileMenuLink span,
+.mobileMenuLink span:before,
+.mobileMenuLink span:after {
+	/* background: #000; */ /* Debug mode */
+	width: 100%;
+	height: .35em;
+	content: '';
+	left: 0;
+	right: 0;
+	position: absolute;
+	-ms-transition: all 400ms ease-in-out;
+	transition: all 400ms ease-in-out;
+	background: #bd2e2e;
+	-webkit-border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	border-radius: 0.3em;
+} 
+.mobileMenuLink span {
+	top: 50%;
+}
+.mobileMenuLink span:before {
+	top: -10px;
+}
+.mobileMenuLink span:after { 
+	bottom: -10px;
+}
+
+.pressed span {
+	background: transparent;
+}
+.pressed span:before {
+	top: 0;
+	-ms-transform: rotate(-45deg); /* IE 9 */
+	-webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+	transform: rotate(-45deg);
+} 
+.pressed span:after {
+	bottom: 0;
+	-ms-transform: rotate(45deg); /* IE 9 */
+	-webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+	transform: rotate(45deg);
+}
+
+/* Header Search, for mobiles */
+
+.headerSearch {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.HeaderSearchInput {
+	width: 100%;
+	height: 100%; 
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-size: 1.1em;
+	background: transparent !important;
+	z-index: 2;
+}
+.HeaderSearchSubmit {
+	background: transparent;
+	border: 0;
+}
+.headerSearchIcon {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 50%;
+	margin-top: -10px; 
+	right: 15px;
+	border: 0; 
+	z-index: 1;
+	display: none;
+}
+.headerSearchIcon span {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: block !important;
+	color: #909090;
+}
+.headerSearchIcon span:before {
+	font-size: 20px; 
+}
+.headerSearchClose {
+	position: absolute;
+	top: 50%; 
+	z-index: 10;
+	margin-top: -8px;
+	right: 20px;
+	cursor: pointer;
+}
+/* Header Menu, for mobiles */
+
+.headerMenu { 
+	display: none; /* Hide menu for mobiles */
+	padding: 1em 0;
+	margin-top: 0.5em;
+	border-top: 1px solid #EFEFEF;
+}
+.nav { 
+	display: block;
+}
+.nav li { 
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+}
+.navLink { 
+	padding: 1em 0;
+	display: block;
+	font-size: 2em;
+	font-weight: bold;
+	color: #222;
+	text-transform: uppercase;
+}
+.navSubtext { 
+	width: 100%;
+	display: inline-block;
+	font-size: 0.5em !important;
+	text-transform: capitalize;
+	font-weight: normal;
+}
+
+/** 
+	Content 
+**/
+.content { 
+	padding: 1.5em 1em;
+	margin-top: 55px;
+}
+.contentInt {
+	/* Nothing on the mobile */ 
+}
+.contentLeft,
+.contentRight {
+	width: 100%;  
+	display: inline-block;
+	vertical-align: top;
+}  
+.contentRight {
+	margin-top: 1em;
+}
+
+/** 
+	Footer 
+**/
+.footer { 
+	display: block !important;
+	background: none repeat scroll 0% 0% #e7e7e7;
+	padding: 1em;
+}
+.footerInt {
+	/* Nothing on the mobile */
+}
+.footerLogo {
+	width: 100%;
+	height: 40px;
+	display: inline-block;
+	margin-bottom: 1em;
+}
+.footerLogoLink {
+	width: 150px;
+	height: 100%; 
+	display: block;
+	background: #f4f4f4;
+}
+.footerLogoImage {
+	/* background: url(); */
+}
+.footerBlock {
+	display: block;
+	/* background: blue; */
+	margin-bottom: 1em;
+}
+.footerBlock h4 {
+	width: 100%;
+	display: block;
+	font-size: 1em;
+	margin-bottom: 0.5em;
+}
+.footerBlock ul {
+	display: block;
+} 
+.footerBlock ul li { 
+	display: inline-block;
+	position: relative;
+	margin-right: 10px;
+} 
+.footerBlock ul li a {
+	width: 100%;
+	height: 100%;
+	display: block;
+} 
+.networksBlock ul li {
+	width: 40px;
+	height: 40px;
+	background: #006396;
+	border-radius:100%; 
+}
+
+	/* MEDIA QUERIES FOR BASIC TEMPLATE */
+	/* SMARTPHONES PORTRAIT */
+	@media only screen and (min-width: 300px) {
+
+
+	}
+
+	/* SMARTPHONES LANDSCAPE */
+	@media only screen and (min-width: 480px) {
+		.footerBlock {
+			width: 48.5% !important; 
+			display: inline-block;
+			vertical-align: top;
+		}
+		.footerBlock:nth-child(odd) {
+			/* float: right; */
+		}
+
+		.profileLink {
+			margin-right: 20px;
+			border-left: 2px solid #eae9e9;
+			padding-left: 20px;
+			margin-left: 10px;
+		}
+		.profileLink span {
+			width: auto !important;
+		}
+		.profileLink p {
+			display: inline-block !important; 
+			vertical-align: top;
+			margin-top: 15px;
+		}
+	}
+
+	/* TABLETS PORTRAIT */
+	@media only screen and (min-width: 768px) {
+ 	
+		.profileLink { 
+			padding-left: 0;
+			margin-left: 0;
+			border-left: 0;
+		} 
+		.searchLink {
+			display: none; /* Hide Search Top Button Icon */
+		}
+		.headerSearch {
+			width: 300px;
+			height: 40px;
+			float: right;
+			margin-right: 20px;
+			background:#ECECEC !important;
+			top: auto; bottom: auto; left: auto; right: auto; 
+			overflow: hidden;
+			display: inline-block !important;
+			position: relative !important;
+			vertical-align: top;
+			text-align: left !important; 
+			-webkit-border-radius: 30px;
+			-moz-border-radius: 30px;
+			border-radius: 30px;
+		}
+		.headerSearchIcon {
+			display: block;
+		}
+		.headerSearch input { 
+			text-align: left !important;
+			text-indent: 15px;
+		}
+		.headerSearch span {
+			display: none;
+		}
+
+	}
+
+	@media only screen and (min-width: 900px) {
+		.headerSearch {
+			width: 460px; 
+		}
+	}
+	/* TABLET LANDSCAPE / DESKTOP */
+	@media only screen and (min-width: 1040px) {
+		/*
+		*	Header 
+		*/
+		.headerInt {
+			width: 1015px;
+			margin: 0 auto;
+		}
+		.headerSearch { 
+			float: right; 
+		} 
+		/** Menu */
+		.headerMenu {
+			height: 40px;
+			display: inline-block !important; 
+			padding: 0;
+			margin: 0;
+			vertical-align: top;
+			border: 0;
+		}
+
+		.headerSearch {
+			width: 185px;
+		}
+		.mobileMenuLink {
+			display: none; /* Hide Hamburguer icon */
+		}
+		.nav li { 
+			width: auto;
+			display: inline-block;
+			text-align: center; 
+			margin: 0;
+			padding: 0;
+			margin-right: -4px; /** erasing display inline margin **/
+		}
+		.nav li a {  
+			font-weight: 500;
+			padding: 15px 16px;
+			padding-bottom: 8px;
+			letter-spacing: 0;
+			text-indent: 0; 
+		}
+		.nav li .navSubtext{
+			display: none;
+		}
+		.navLink {
+			padding: 0;
+			font-size: 1em;
+		}
+ 
+		/*
+		*	Content In
+		*/
+
+		.contentInt {
+			width: 1015px;
+			margin: 0 auto;
+			background: #fff;
+			padding: 1em;
+			display: block;
+			position: relative;
+		}
+ 		
+ 		.contentLeft {
+ 			width: 670px; 
+ 			margin-right: 1em;
+ 		}
+ 		.contentRight {
+ 			width: 320px; 
+ 			margin-top: 0;  
+ 		} 
+
+		/*
+		*	Footer
+		*/
+
+		.footerInt {
+			width: 1015px;
+			margin: 0 auto;
+		}
+	}   
+
+
+/*
+	Here goes the specific template styles.
+*/

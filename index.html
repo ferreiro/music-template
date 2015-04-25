@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+	<!-- Basic meta setup -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<meta name="description" content="">
+
+	<title>Basic Website Template</title>
+
+	<!-- Styles -->
+	<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,600,700" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="static/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="static/fonts/style.css" />
+	<link rel="stylesheet" type="text/css" href="static/css/style.css" />
+
+</head>
+<body>
+
+
+	<header class="header">
+	<div 	class="headerInt">
+
+		<div class="headerLogo">
+			<a href="#" class="HeaderLogoLink">
+				<span class="HeaderLogoImage"><!-- Add logo --></span>
+			</a>
+		</div>
+
+		<div class="headerOptions">
+
+			<div class="headerOptionsLink uploadLink" style="display:none;" >
+				<a href="#">
+					<span class="icon-upload"></span>
+					<p>
+						Upload
+					</p>
+				</a>
+			</div>
+
+			<div class="headerOptionsLink searchLink">
+				<a href="#" id="js-navbar-search">
+					<span class="icon-search"></span>
+					<p>
+						Search
+					</p>
+				</a>
+
+			</div>
+
+			<div class="headerOptionsLink profileLink">
+				<a href="#">
+					<span class="icon-user"></span>
+					<p>
+						Access
+					</p>
+				</a>
+			</div>
+
+			<div class="headerOptionsLink mobileMenuLink">
+				<button type="button" class="mobileMenuButton" id="js-navbar-menu">
+					<span class="menu-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+
+		</div><!-- End HeaderOptions -->
+
+		<div class="headerSearch">
+		<form action="http://music4deejays.com/" class="searchform" id="searchform" method="get" role="search" _lpchecked="1">
+			<span class="headerSearchClose">Close</span>
+			<input type="text" class="HeaderSearchInput" name="s" id="s" placeholder="Search..." autocomplete="off" />
+			<div class="headerSearchIcon ">
+				<span class="icon-search"></span>
+				<input type="submit" class="HeaderSearchSubmit" name="submit" id="searchsubmit" value=" " /> 
+			</div>
+		</form>
+		</div>
+		<nav class="headerMenu">
+			<ul class="nav">
+				<li>
+					<a href="#" class="navLink">
+
+						Home
+
+						<span class="navSubtext">
+							Discover the lastes news
+						</span>
+					</a>
+				</li> 
+				<li>
+					<a href="#" class="navLink">
+
+						Menu 2
+
+						<span class="navSubtext">
+							Lorem Ipsum is simply dummy text
+						</span>
+					</a>
+				</li> 
+				<li>
+					<a href="#" class="navLink">
+
+						Menu 3
+
+						<span class="navSubtext">
+							It was popularised in the 1960s with the release
+						</span>
+					</a>
+				</li> 
+				<li>
+					<a href="#" class="navLink">
+
+						Menu 4
+
+						<span class="navSubtext">
+							It is a long established fact that a reader will be distracted
+						</span>
+					</a>
+				<li>
+					<a href="#" class="navLink">
+
+						Upload
+
+						<span class="navSubtext">
+							It is a long established fact that a reader will be distracted
+						</span>
+					</a>
+				</li> 
+			</ul>
+		</nav><!-- End HeaderMenu -->
+
+	</div>
+	</header><!-- Fin header -->
+
+	<section class="content">
+	<div class="contentInt">
+		 
+		<section class="contentLeft">
+			<img src="https://a-v2.sndcdn.com/assets/images/front/little_simz-6b76b6.jpg" style="width:100%;">
+		</section>
+
+		<section class="contentRight">
+			<img src="https://i1.sndcdn.com/artworks-000114456444-21emjf-t500x500.jpg" style="width:100%;">
+		</section>
+	
+	</div>
+	</section>  
+ 
+	<footer class="footer">
+	<div 	class="footerInt"> 
+		<div class="footerLogo">
+			<a href="#" class="footerLogoLink">
+				<span class="footerLogoImage"><!-- Add logo --></span>
+			</a>
+		</div>
+		<div class="footerBlock infoBlock">
+			<h4>
+				Music4deejays info
+			</h4>
+			<ul>
+				<li>
+					<a href="#">
+						About us
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Jobs
+					</a>
+				</li> 
+				<li>
+					<a href="#">
+						News
+					</a>
+				</li> 
+			</ul>
+		</div>  
+		<div class="footerBlock networksBlock">
+			<h4>
+				Follow us
+			</h4>
+			<ul>
+				<li>
+					<a href="#">
+						<span class="icon-twitter"></span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="icon-facebook"></span>
+					</a>
+				</li> 
+			</ul>
+		</div>
+	</div>
+	</footer>
+
+
+
+
+
+	<!-- Scripts -->
+	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js?ver=3.9.2'></script> 
+	<script type='text/javascript' src='static/js/scripts.js'></script> 
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-XXXXXXXX-X', 'auto');
+	  ga('send', 'pageview');
+	</script>
+
+</body>
+</html>
