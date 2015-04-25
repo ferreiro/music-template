@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'website';
-	src:url('fonts/website.eot?gtc5t7');
-	src:url('fonts/website.eot?#iefixgtc5t7') format('embedded-opentype'),
-		url('fonts/website.woff?gtc5t7') format('woff'),
-		url('fonts/website.ttf?gtc5t7') format('truetype'),
-		url('fonts/website.svg?gtc5t7#website') format('svg');
+	src:url('fonts/website.eot?-8c5huj');
+	src:url('fonts/website.eot?#iefix-8c5huj') format('embedded-opentype'),
+		url('fonts/website.woff?-8c5huj') format('woff'),
+		url('fonts/website.ttf?-8c5huj') format('truetype'),
+		url('fonts/website.svg?-8c5huj#website') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,8 +23,104 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-account-circle:before {
+	content: "\e603";
+}
+
+.icon-favorite:before {
+	content: "\e604";
+}
+
+.icon-favorite-outline:before {
+	content: "\e605";
+}
+
+.icon-play-arrow:before {
+	content: "\e606";
+}
+
+.icon-play-circle-fill:before {
+	content: "\e607";
+}
+
+.icon-play-circle-outline:before {
+	content: "\e608";
+}
+
+.icon-skip-next:before {
+	content: "\e609";
+}
+
+.icon-skip-previous:before {
+	content: "\e60a";
+}
+
+.icon-volume-down:before {
+	content: "\e60b";
+}
+
+.icon-volume-mute:before {
+	content: "\e60c";
+}
+
+.icon-volume-off:before {
+	content: "\e60d";
+}
+
+.icon-volume-up:before {
+	content: "\e60e";
+}
+
+.icon-messenger:before {
+	content: "\e60f";
+}
+
+.icon-send:before {
+	content: "\e610";
+}
+
+.icon-cloud-download:before {
+	content: "\e611";
+}
+
+.icon-cloud-upload:before {
+	content: "\e612";
+}
+
+.icon-file-download:before {
+	content: "\e613";
+}
+
+.icon-file-upload:before {
+	content: "\e614";
+}
+
+.icon-playlist-add:before {
+	content: "\e615";
+}
+
+.icon-share:before {
+	content: "\e616";
+}
+
+.icon-pause:before {
+	content: "\e617";
+}
+
 .icon-search:before {
 	content: "\e602";
+}
+
+.icon-playback-pause:before {
+	content: "\f0bb";
+}
+
+.icon-playback-play:before {
+	content: "\f0bf";
+}
+
+.icon-share2:before {
+	content: "\ea82";
 }
 
 .icon-user:before {

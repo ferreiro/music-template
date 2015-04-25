@@ -379,9 +379,47 @@ button {
 	margin-top: -22.5px;
 	background: none repeat scroll 0% 0% #BD2E2E;
 }
+.songInfoHeaderPlayButtom span {
+	width: 100%;
+	height: 100%;
+	display: block; 
+	text-align: center;
+}
+.songInfoHeaderPlayButtom span:before {
+	font-size: 35px;
+	color: #fff;
+	margin-top: 5px;
+	display: block;
+}
 .songInfoHeaderDescription { 
-	padding: 25px 0;
-	margin-left: 60px;
+	padding: 20px 0;
+	margin-top: 10px;
+	margin-left: 61px;
+	overflow: hidden;
+}
+.songInfoHeaderDescription h2 {
+	position: relative;
+}
+.songInfoHeaderDescription h2 a:after { 
+	/** Hide the overflow text **/
+	content: '';
+	width: 120px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	float: left;
+	background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,0) 45%, rgba(255,255,255,1) 99%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(45%,rgba(255,255,255,0)), color-stop(99%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 45%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 45%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 45%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 45%,rgba(255,255,255,1) 99%,rgba(255,255,255,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+
+}
+.songInfoHeaderDescription h2 a { 
+	white-space: nowrap; 
 }
 	/* Author and genre  */
 .songInfoHeaderExtra p {
