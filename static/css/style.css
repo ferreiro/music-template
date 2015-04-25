@@ -449,7 +449,8 @@ button {
 	width: 0.8em;
 	margin-right: 0.2em;
 	background: #000;
-	content: '';
+	background: transparent;
+	content: '>';
 	height: 1em;
 	display: inline-block;
 	vertical-align: top;
