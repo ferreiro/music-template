@@ -59,7 +59,7 @@ button {
 	height: 40px;
 	background: #f4f4f4;
 	display: inline-block;
-	margin-right: 0.5em;
+	margin-right: 15px;
 }
 .HeaderLogoLink {
 	width: 100%; 
@@ -227,6 +227,8 @@ button {
 	padding: 1em 0;
 	margin-top: 0.5em;
 	border-top: 1px solid #EFEFEF;
+	overflow: auto;
+	max-height: 100%;
 }
 .nav { 
 	display: block;
@@ -299,7 +301,8 @@ button {
 	width: 100%;
 	display: block;
 	margin-bottom: 1em; 
-}
+	position: relative;
+} 
 .songHeader {
 	width: 100%;
 	height: 150px;
@@ -350,7 +353,12 @@ button {
 	display: block;
 }
 .songInfo { 
-	display: none;
+	display: none;  
+	height: 150px;
+	position: absolute;
+	left: 170px;
+	top: 0;
+	right: 0; 
 }
 .songInfoHeader {
 	position: relative;
@@ -358,22 +366,37 @@ button {
 	overflow: visible;
 }
 .songInfoHeaderPlayButtom {
-	width: 30px;
-	height: 30px;
+	width: 45px;
+	height: 45px;
 	position: absolute;
+	/*
+	-webkit-border-radius:100%;
+	-moz-border-radius:100%;
+	border-radius:100%;
+	*/
 	left: 0;
 	top: 50%;
-	margin-top: -15px;
+	margin-top: -22.5px;
 	background: none repeat scroll 0% 0% #BD2E2E;
 }
 .songInfoHeaderDescription { 
-	margin-left: 45px;
+	padding: 25px 0;
+	margin-left: 60px;
+}
+	/* Author and genre  */
+.songInfoHeaderExtra p {
+	width: auto;
+	margin-right: 0.8em;
+	display: inline-block;
 }
 .songInfoLinks {
-	margin-top: 0.6em;
+	margin-top: 0em;
 }
-.songInfoLinks ul li {
-	margin-top: 0.6em;
+.songInfoLinks button {
+	padding: 5px 10px;
+	margin-right: 5px;
+	border: 1px solid #cecece;
+	background: transparent;
 }
 /* Only show on mobile phones */
 .songBottom {
@@ -385,7 +408,7 @@ button {
 .songBottom p.genre:before {
 	width: 0.8em;
 	margin-right: 0.2em;
-	background: red;
+	background: #000;
 	content: '';
 	height: 1em;
 	display: inline-block;
@@ -523,7 +546,7 @@ button {
 			-webkit-border-radius: 30px;
 			-moz-border-radius: 30px;
 			border-radius: 30px;
-		}
+		} 
 		.headerSearchIcon {
 			display: block;
 		}
@@ -546,10 +569,7 @@ button {
 		}		
 		.song:nth-child(even) { 
 			margin-right: 0;
-		}
-		.headerSearch {
-			width: 460px; 
-		}
+		} 
 	}
 	/* TABLET LANDSCAPE / DESKTOP */
 	@media only screen and (min-width: 1040px) {
@@ -633,9 +653,15 @@ button {
 			margin-right: 0;
 		}
 		.songHeader {
-			height: 250px;
+			width: 150px;
+			height: 150px;
+		} 
+		.songHeader img {
+			margin-top: 0 !important;
+		} 
+		.songHeaderInfo {
+			display: none; /* Only on mobiles */
 		}
-
 		.songInfo {
 			display: block;
 		}

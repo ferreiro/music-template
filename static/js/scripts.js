@@ -28,7 +28,7 @@ calculateImageMargin();
 
 function calculateImageMargin() {
 	$('.songHeaderAvatar img').each(function(){
-	    var panelLeft = $('.songHeader').width();
+	    var panelLeft = $('.songHeaderAvatar').width();
 	    var marginA = -(panelLeft / 3.2);
 	    
 		$(this).css({
