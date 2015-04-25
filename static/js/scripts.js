@@ -19,3 +19,42 @@ mobileSearch.click(function() {
 closeSearch.click(function() {
 	mobileSearchForm.hide();
 });
+
+/****
+	SONGS LIST
+**/
+
+calculateImageMargin();
+
+function calculateImageMargin() {
+	$('.songHeaderAvatar img').each(function(){
+	    var panelLeft = $('.songHeader').width();
+	    var marginA = -(panelLeft / 3.2);
+	    
+		$(this).css({
+			'margin-top': marginA
+		});
+		// console.log("" + windowH);
+	    // console.log("" + marginA);
+	});
+}
+
+function calculateBoxHeight() {
+
+}
+
+$(window).resize(function() {
+	calculateImageMargin();
+});
+
+
+/*
+songImage.each(function() {
+	var iHeight = $(this).height();
+	var move = - (iHeight / 2);
+
+	$(this).css({
+		'margin-top': move
+	});
+});
+*/
