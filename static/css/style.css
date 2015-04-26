@@ -226,8 +226,7 @@ button {
 	display: none; /* Hide menu for mobiles */
 	padding: 1em 0;
 	margin-top: 0.5em;
-	border-top: 1px solid #EFEFEF;
-	overflow: auto;
+	border-top: 1px solid #EFEFEF; 
 	max-height: 100%;
 }
 .nav { 
