@@ -9,6 +9,7 @@ body {
 	background: #fff;
 	background: #f4f4f4;
 	background: #fff;
+	background-color: #f3f5f6;
 	font-size: 16px;
 	color: #222;
 	font-family: 'Roboto',Helvetica, sans-serif, Arial; 
@@ -241,11 +242,12 @@ button {
 	background: #f4f4f4;
 }
 .nav li.selected  {
-  background: #BD2E2E;
+  background: #E4E4E4;  
   color: #fff;
 }
 .nav li.selected a {  
-	color: #fff;
+	/* color: #fff; */
+  	text-decoration: underline;
 }
 .navLink { 
 	padding: 1em 0;
@@ -291,6 +293,274 @@ button {
 	font-weight: 500; 
 }
 
+
+
+/**************
+	Slider
+***************/
+
+.slider
+{
+	width: 100%;
+	height: 280px;
+	position: relative; 
+	float: left;
+	overflow: hidden;
+	margin-bottom: 1em;
+}
+.sliderVerticalLine
+{
+	width: 10px;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,0.3);
+	z-index: 1;
+	display: none;
+}
+
+.slider:hover .sliderButtonPrev,
+.slider:hover .sliderButtonNext
+{
+	opacity: 1;
+}
+.sliderButtonPrev,
+.sliderButtonNext
+{
+	opacity: 0; 
+	width: 45px;
+	height: 70px;
+	position: absolute;
+	top: 50%;
+	margin-top: -30px;
+	left: 0;
+	cursor: pointer;
+	z-index: 3;
+	background-color: rgba(0, 0, 0, 0.2);  
+}
+.sliderButtonNext
+{
+	right: 10px;
+	left: inherit;
+}
+.sliderButtonNext:before
+{
+	right: 20px;
+	margin-left: 0px !important;
+}
+.sliderButtonPrev:before,
+.sliderButtonNext:before
+{
+	width: 15px;
+	height: 30px;
+	top: 50%;
+	margin: 0;
+	margin-top: -15px;
+	position: absolute; 
+	padding: 0;  
+	float: left;
+	color: rgba(255,255,255,0.4);
+	font-size: 30px; 
+}
+.sliderButtonPrev
+{
+	border-radius: 0 90px 90px 0;
+}
+.sliderButtonNext
+{
+	right: 0;
+	left: inherit;
+	border-radius: 90px 0 0 90px;
+}
+.sliderSelector
+{
+	left: 0;
+	height: auto;
+	right: 0;
+	position: absolute;
+	bottom: 0; 
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: left;
+	z-index: 1;
+}
+.sliderSelector ul
+{
+	margin: 0;
+	padding: 0;
+}
+.sliderSelector li:hover 
+{ 
+	background: rgba(255,255,255,0.35);
+}
+.sliderSelector li.current
+{
+	background: rgba(255,255,255,0.65);
+}
+.sliderSelector li:last-child
+{
+	margin-right: 0 !important;
+} 
+.sliderSelector li 
+{
+	width: 33%; 
+	height: 8px;
+	float: left;
+	cursor: pointer; 
+	bottom: 0;
+	padding: 0;
+	margin: 0; 
+	margin-right: 0.5%;
+	background: rgba(255,255,255,0.25);
+	transition:0.3s; 
+
+}
+.sliderDiapos 
+{ 
+	width: 100%;
+	height: 100%;
+	float: left; 
+	list-style: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	overflow: hidden !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}  
+.sliderDiapos li
+{
+	display: none;
+	float: left;
+	margin: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: 50% 50% no-repeat;
+	background-size: cover;
+ 
+	transition: background-color 0.5s ease;
+}  
+.sliderDiapos li.current
+{	
+	/* Don't edit this part */
+	display: block;
+	z-index: 2 !important;
+}
+.sliderDiapos li.next
+{	
+	/* Don't edit this part */
+	display: block;
+	z-index: 1 !important;
+}
+.sliderDiapos li ul li 
+{	
+	/* Don't edit this part - prevents inline lists from being hidden */
+	display: block !important;
+	position: relative !important;
+}
+.sliderDiapos:hover li .sliderDiaposInfo
+{ 
+	bottom: 0;
+	margin-bottom: 0; 
+}
+.sliderDiaposInfo 
+{  
+	padding:21px 20px;
+	margin-bottom:0; 
+	left: 10px;
+	right: 0;
+	bottom:0;
+	z-index: 3;
+	position: absolute; 
+	background-color: rgba(0, 0, 0, 0.74902);
+	transition:0.3s;
+
+	padding: 21px 35px;
+	padding-top: 90px;
+	margin-bottom: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 3;
+	position: absolute;
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.79) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.79)));
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.79) 100%);
+	background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.79) 100%);
+	background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.79) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.79) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#c9000000',GradientType=0 );
+
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 80%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(80%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 80%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 80%,rgba(0,0,0,0.65) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 80%,rgba(0,0,0,0.65) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 80%,rgba(0,0,0,0.65) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+
+
+}
+.sliderDiaposInfo h1
+{
+	width: 100%;
+	margin: 0;
+	padding: 0; 
+}
+.sliderDiaposInfo h1 a
+{ 
+	font-size: 22px;
+	line-height: 22px;
+	font-weight: 500;
+	color: rgba(255,255,255,0.9);
+}
+.sliderDiaposInfo h2
+{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	font-weight: 300;
+	color: rgba(255,255,255,0.6);
+}
+.sliderDiaposInfo p
+{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	font-weight: 300;
+	color: rgba(255,255,255,0.9);
+}
+.sliderDiaposInfo p a
+{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	font-weight: 300;
+}
+.sliderDiaposLink
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+}
+.sliderDiaposLink a
+{
+	width: 100%;
+	height: 100%;
+	float: left;
+}
+
+
 /********************
 	SONG 
 ********************/
@@ -301,6 +571,14 @@ button {
 	margin-bottom: 1em; 
 	position: relative;
 } 
+.songMask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(255,255,255,0.9); 
+}
 .songHeader {
 	width: 100%;
 	height: 150px;
@@ -366,18 +644,19 @@ button {
 .songInfoHeaderPlayButtom {
 	width: 45px;
 	height: 45px;
-	position: absolute;
-	/*
+	position: absolute; 
 	-webkit-border-radius:100%;
 	-moz-border-radius:100%;
-	border-radius:100%;
-	*/
+	border-radius:100%; 
 	left: 0;
 	top: 50%;
 	margin-top: -22.5px;
 	background: none repeat scroll 0% 0% #BD2E2E;
 	background: transparent;
-	border: 1px solid #595858; 
+	background: none repeat scroll 0% 0% #BD2E2E;
+	border: 1px solid #595858;
+	border: 0;
+
 	cursor: pointer;   
 }
 .songInfoHeaderPlayButtom span {
@@ -389,8 +668,13 @@ button {
 .songInfoHeaderPlayButtom span:before {
 	font-size: 35px;
 	color: #595858;
+	color: #fff;
 	margin-top: 5px;
 	display: block;
+}
+.songInfoHeaderPlayButtom .icon-pause:before {
+	font-size: 22px !important; 
+	margin-top: 12px;
 }
 .songInfoHeaderDescription { 
 	padding: 20px 0;

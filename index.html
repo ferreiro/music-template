@@ -142,7 +142,52 @@
 		 
 		<section class="contentLeft">
 
-			<img src="https://a-v2.sndcdn.com/assets/images/front/little_simz-6b76b6.jpg" style="width:100%;">
+
+			<div class="slider" style="height:320px;">
+                <div class="sliderVerticalLine"></div>
+
+                <div class="sliderButtonPrev icon-prev"></div>
+                <div class="sliderButtonNext icon-next"></div>
+                <ul class="sliderSelector"><li class="sel_1 current"></li><li class="sel_2"></li><li class="sel_3"></li></ul>
+                <ul class="sliderDiapos" id="sliderDiapos">
+			                                             
+		         
+		        <li class="fading slider_1 current" style="opacity: 1; background-image: url(http://music4deejays.com/media/uploads/2015/05/avatars-000145203340-8h4u4l-t500x500.jpg);">
+		            <div class="sliderDiaposInfo">
+		                <h1><a href="http://music4deejays.com/apocalypse-bounc-inc/">Apocalypse (Original Mix) – Bounce INC</a></h1>
+		                <h2>Bounce</h2>
+		                <!-- <p><a href="#" onclick="event.preventDefault(); $('#playlist_list #playlist2').prepend($('.BoxSongUrl')); api_loadPlaylist(hap_players[0],{hidden: true, id: '#playlist2'}); api_playAudio(hap_players[0]); return false;">Listen song</a></p> -->
+		            </div>
+		            <div class="sliderDiaposLink">
+		                <a href="http://music4deejays.com/apocalypse-bounc-inc/"></a>
+		            </div>
+		        </li> 
+		           
+		        <li class="fading slider_2" style="opacity: 1; background-image: url(http://music4deejays.com/media/uploads/2015/05/kukulkan-eduardo-Cartal2-700x700.jpg);">
+		            <div class="sliderDiaposInfo">
+		                <h1><a href="http://music4deejays.com/kukulkan-eduardo-cartal/">Kukulkan – Eduardo Cartal</a></h1>
+		                <h2>Electro house</h2>
+		                <!-- <p><a href="#" onclick="event.preventDefault(); $('#playlist_list #playlist2').prepend($('.BoxSongUrl')); api_loadPlaylist(hap_players[0],{hidden: true, id: '#playlist2'}); api_playAudio(hap_players[0]); return false;">Listen song</a></p> -->
+		            </div>
+		            <div class="sliderDiaposLink">
+		                <a href="http://music4deejays.com/kukulkan-eduardo-cartal/"></a>
+		            </div>
+		        </li> 
+		           
+		        <li class="fading slider_3" style="opacity: 1; background-image: url(http://music4deejays.com/media/uploads/2014/05/artworks-000059154182-hl7d59-t500x500.jpg);">
+		            <div class="sliderDiaposInfo">
+		                <h1><a href="http://music4deejays.com/datphoria-play-this-game-ehde-remix/">DatPhoria – Play This Game (EH!DE Remix)</a></h1>
+		                <h2>Dubstep</h2>
+		                <!-- <p><a href="#" onclick="event.preventDefault(); $('#playlist_list #playlist2').prepend($('.BoxSongUrl')); api_loadPlaylist(hap_players[0],{hidden: true, id: '#playlist2'}); api_playAudio(hap_players[0]); return false;">Listen song</a></p> -->
+		            </div>
+		            <div class="sliderDiaposLink">
+		                <a href="http://music4deejays.com/datphoria-play-this-game-ehde-remix/"></a>
+		            </div>
+		        </li> 
+			</ul>
+			</div>
+
+
 
 			<h1 class="title">
 				<b>New songs</b> on name
@@ -152,6 +197,7 @@
 
 
 				<li class="song">
+					<div class="songMask"></div>
 					<div class="songHeader">
 						<div class="songHeaderAvatar">
 							<a href="#">
@@ -188,9 +234,9 @@
 							</div> 
 						</div>
 						<div class="songInfoLinks">
-								<button title="download" tabindex="0" class="">Download</button>
-								<button title="share" tabindex="0" class="">Share</button>
 								<button title="playlist" tabindex="0" class="">Add playlist</button> 
+								<button title="share" tabindex="0" class="">Share</button>
+								<button title="download" tabindex="0" class="">Download</button>
 								<button title="playlist" tabindex="0" class="relatedButton">Related</button> 
 						</div>
 					</div>
@@ -216,6 +262,7 @@
 
 
 				<li class="song">
+					<div class="songMask"></div>
 					<div class="songHeader">
 						<div class="songHeaderAvatar">
 							<a href="#">
@@ -364,7 +411,7 @@
 					<div class="songInfo">
 						<div class="songInfoHeader">
 							<div class="songInfoHeaderPlayButtom">
-								<span class="icon-play-arrow"></span>
+								<span class="icon-pause"></span>
 							</div>
 							<div class="songInfoHeaderDescription">
 								<h2>
